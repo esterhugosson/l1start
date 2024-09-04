@@ -1,0 +1,21 @@
+{
+  "name": "l1",
+  "version": "1.0.0",
+  "description": "First assignment in course 1dv610",
+  "type": "module",
+  "browser": "index.js",
+  "scripts": {
+    "dev": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/esterhugosson/L1.-B-rja-programmera-igen.git"
+  },
+  "author": "Ester Hugosson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esterhugosson/L1.-B-rja-programmera-igen/issues"
+  },
+  "homepage": "https://github.com/esterhugosson/L1.-B-rja-programmera-igen#readme"
+}
