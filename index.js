@@ -14,8 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('nameInput')
     const container = document.getElementById('container')
     const result = document.getElementById('result')
+    const backButton = document.getElementById('backButton')
+    //const resultcontainer = document.getElementById('resultcontainer')
 
-    button.addEventListener('click', () => {
+
+    button.addEventListener('click', async() => {
 
         //Save name from input
         const name = input.value
@@ -23,15 +26,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if(name) {
 
-            const nameDayObject = getDay(name)
+            const nameDayObject = await getDay(name)
+
+            if (nameDayObject && nameDayObject['0'] && nameDayObject['0'].length > 0) {
+                const namedayInfo = nameDayObject['0'][0]
+                const { day, month, name: namedayName } = namedayInfo
+
+                result.textContent = `For name: ${namedayName} is nameday ${day}/${month}`
+            } else {
+                result.textContent = `Hi, ${name}, no nameday found.`
+            }
 
 
-            result.textContent = `Hi, ${name}, ${nameDayObject} `
             container.style.display = 'none'
+
+
         } else {
             result.textContent = 'Please enter name.'
         }
+
+        backButton.style.display = 'block'
         
+    })
+
+    backButton.addEventListener('click', () => {
+
+        location.reload()
+
     })
 
 })
