@@ -5,6 +5,7 @@
  */
 
 // Listening when a name is entered and then presenting the result
+import { GetNameDay } from './api.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -21,7 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         if(name) {
-            result.textContent = `Welcome, ${name} `
+
+            const nameDayObject = getDay(name)
+
+
+            result.textContent = `Hi, ${name}, ${nameDayObject} `
             container.style.display = 'none'
         } else {
             result.textContent = 'Please enter name.'
@@ -30,3 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 })
+
+async function getDay(name) {
+
+    const day = new GetNameDay(name)
+
+    const result = await day.getNameDay()
+
+    console.log(result)
+
+    return result
+
+
+}
