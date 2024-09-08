@@ -1,6 +1,6 @@
 
 /**
- * Js file for L1 
+ * Main application for L1 
  * @author Ester Hugosson
  */
 
