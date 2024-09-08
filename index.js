@@ -8,4 +8,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    const button = document.getElementById('submitbutton')
+    const input = document.getElementById('nameInput')
+    const container = document.getElementById('container')
+    const result = document.getElementById('result')
+
+    button.addEventListener('click', () => {
+        const name = input.value
+
+        result.textContent = `Welcome, ${name} `
+    })
+
 })
