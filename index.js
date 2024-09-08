@@ -8,15 +8,25 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const button = document.getElementById('submitbutton')
+    //Html element 
+    const button = document.getElementById('submitButton')
     const input = document.getElementById('nameInput')
     const container = document.getElementById('container')
     const result = document.getElementById('result')
 
     button.addEventListener('click', () => {
+
+        //Save name from input
         const name = input.value
 
-        result.textContent = `Welcome, ${name} `
+
+        if(name) {
+            result.textContent = `Welcome, ${name} `
+            container.style.display = 'none'
+        } else {
+            result.textContent = 'Please enter name.'
+        }
+        
     })
 
 })
