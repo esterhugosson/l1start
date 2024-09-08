@@ -13,13 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('submitButton')
     const input = document.getElementById('nameInput')
     const container = document.getElementById('container')
+    const resultcontainer = document.getElementById('resultcontainer')
     const result = document.getElementById('result')
     const backButton = document.getElementById('backButton')
-    //const resultcontainer = document.getElementById('resultcontainer')
-
 
     button.addEventListener('click', async() => {
 
+        container.style.display = 'none'
+        resultcontainer.style.display = 'block'
         //Save name from input
         const name = input.value
 
@@ -32,13 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const namedayInfo = nameDayObject['0'][0]
                 const { day, month, name: namedayName } = namedayInfo
 
-                result.textContent = `For name: ${namedayName} is nameday ${day}/${month}`
+                result.textContent = `${namedayName} have nameday ${day}/${month}`
             } else {
                 result.textContent = `Hi, ${name}, no nameday found.`
             }
 
-
-            container.style.display = 'none'
 
 
         } else {
@@ -60,10 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 async function getDay(name) {
 
     const day = new GetNameDay(name)
-
     const result = await day.getNameDay()
-
-    console.log(result)
 
     return result
 
