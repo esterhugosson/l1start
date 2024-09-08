@@ -1,0 +1,63 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: darkolivegreen;
+    margin: 0;
+    padding: 0;
+}
+
+#resultcontainer {
+    display: none;
+}
+
+#container, #resultcontainer {
+    background-color: darkkhaki;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px; /* Adjust as needed */
+}
+
+#container h1 {
+    color: white;
+}
+
+#nameInput {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+#submitButton {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: olive;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submitButton:hover {
+    background-color: darkolivegreen;
+}
+
+#result {
+    color: white;
+    margin: 1rem 0;
+}
+
+#backButton {
+    display: none; /* Initially hidden */
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: olive;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#backButton:hover {
+    background-color: darkolivegreen;
+}
